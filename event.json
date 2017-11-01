@@ -1,0 +1,37 @@
+{
+    "messageVersion": "1.0",
+    "invocationSource": "FulfillmentCodeHook",
+    "userId": "user-1",
+    "sessionAttributes": {},
+    "bot": {
+      "name": "SearchMoviesBot",
+      "alias": "$LATEST",
+      "version": "$LATEST"
+    },
+    "outputDialogMode": "Text",
+    "currentIntent": {
+      "name": "SearchMovie",
+      "slots": {
+        "castMember": "Brad Pitt",
+        "year": "0",
+        "genre": "All"
+      },
+      "slotDetails": {
+        "castMember": {
+          "resolutions" : [
+            { "value": "comedy" },
+            { "value": "drama" }
+          ],
+          "originalValue": "Brad Pitt"
+        },
+        "genre": {
+          "resolutions" : [
+            { "value": "resolved value" },
+            { "value": "resolved value" }
+          ],
+          "originalValue": "original text"
+        }
+      },
+      "confirmationStatus": "None"
+    }
+  }

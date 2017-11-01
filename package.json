@@ -1,0 +1,22 @@
+{
+  "name": "aws-lex-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "debug-api": "sam local start-api -d 5858",
+    "debug": "sam local invoke MovieSearchProcessor --event event.json",
+    "_deploy": "claudia create --region us-east-1 --handler lambda.handler --name MovieSearchProcessor --description 'Queries MongoDB Atlas to retrieve movie information on a behalf of a Lex bot' --role arn:aws:iam::162367489900:role/service-role/LambdaBasicExecRole --timeout 6 --set-env-from-json claudia-env.json --version development",
+    "deploy": "claudia create --config claudia.json --region us-east-1 --handler lambda.handler --name MovieSearchProcessor --description 'Queries MongoDB Atlas to retrieve movie information on a behalf of a Lex bot' --role arn:aws:iam::162367489900:role/service-role/LambdaBasicExecRole --timeout 6 --set-env-from-json claudia-env.json --version development",
+    "update": "claudia update --config claudia.json --version development",
+    "release": "claudia set-version --version production"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "^2.2.33",
+    "os": "^0.1.1"
+  }
+}

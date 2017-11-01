@@ -1,0 +1,3 @@
+{
+    "MONGODB_URI": "mongodb://atlasAdminM1:Ibg5LRNk0tZN1KhS@cluster0-shard-00-00-nebpx.mongodb.net:27017,cluster0-shard-00-01-nebpx.mongodb.net:27017,cluster0-shard-00-02-nebpx.mongodb.net:27017/IMDB?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin"
+}

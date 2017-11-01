@@ -1,0 +1,7 @@
+{
+  "lambda": {
+    "role": "arn:aws:iam::162367489900:role/service-role/LambdaBasicExecRole",
+    "name": "MovieSearchProcessor",
+    "region": "us-east-1"
+  }
+}

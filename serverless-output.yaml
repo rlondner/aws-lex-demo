@@ -1,0 +1,19 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: A Lambda function that searches a movie collection in MongoDB Atlas
+Resources:
+  MovieSearchProcessor:
+    Properties:
+      CodeUri: s3://sam.local/9e21989f18b0301c7d979285c247c360
+      Environment:
+        Variables:
+          MONGODB_URI: mongodb://atlasAdminM1:Ibg5LRNk0tZN1KhS@cluster0-shard-00-00-nebpx.mongodb.net:27017,cluster0-shard-00-01-nebpx.mongodb.net:27017,cluster0-shard-00-02-nebpx.mongodb.net:27017/IMDB?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin
+      Events:
+        Api:
+          Properties:
+            Method: post
+            Path: /moviesearch
+          Type: Api
+      Handler: lambda.handler
+      Runtime: nodejs6.10
+    Type: AWS::Serverless::Function
+Transform: AWS::Serverless-2016-10-31

@@ -1,0 +1,23 @@
+{
+        "version": "0.2.0",
+        "configurations": [
+            {
+                "name": "Attach to SAM Local",
+                "type": "node",
+                "request": "attach",
+                "address": "localhost",
+                "port": 5858,
+                "localRoot": "${workspaceRoot}",
+                "remoteRoot": "/var/task"
+            },
+            {
+                "type": "node",
+                "request": "launch",
+                "name": "Launch SAM Invoke",
+                "program": "/usr/local/bin/sam",
+                "args": [
+                    "local", "invoke", "MovieSearchProcessor", "--event", "event.json"
+                ]
+            }
+        ]
+    }
